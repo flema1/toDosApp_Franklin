@@ -1,9 +1,9 @@
 const express = require('express');
-//const logger = require('morgan');
+const logger = require('morgan');
 const path = require('path');
 const app = express()
 
-//app.use(logger('dev'));
+app.use(logger('dev'));
 // static files
 app.use(express.static('public'));
 
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.listen(3000, function () {
+app.listen(3001, function () {
   console.log('app listening on port 3000!')
 })
 
