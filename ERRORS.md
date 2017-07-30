@@ -10,3 +10,6 @@ SELECT * FROM todos
 
 fix: fogot to update database name in config.js
 
+
+TypeError: Invalid query format.
+    at Database.$query (/Users/franklinl/Desktop/wdi/UNIT_02/HW/toDosApp_Franklin

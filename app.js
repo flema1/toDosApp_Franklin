@@ -1,9 +1,17 @@
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
+
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const app = express()
 
 app.use(logger('dev'));
+
+// middlewares
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 // static files
 app.use(express.static('public'));
 
@@ -17,19 +25,21 @@ app.get('/', (req, res) => {
     message: 'Hello world we are aalive!',
   });
 });
+
+
 /* setting up port & listen */
-const PORT = process.env.PORT || 3010;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
   console.log(`listening on port ${PORT} 00`);
 });
 
-app.get('/toDos', (req, res) => {
+app.get('/todos', (req, res) => {
   res.send('Info about toDos!');
 });
 
 //additional routes
  const todoRoutes = require('./routes/todo-routes');
- app.use('/toDos/', todoRoutes);
+ app.use('/todos', todoRoutes);
 
 
 
