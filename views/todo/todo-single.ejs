@@ -3,20 +3,14 @@
       <h1><%= data.title %></h1>
       <h3><%= data.category %></h3>
       <h3><%= data.status %></h3>
-
       <a href='/todos/all'>See all todos</a>
       <div class="button-container">
-           <a href="/todos/<%= data.id %>/edit">Edit it</a>
+            <a href="/todos/<%= data.id %>/edit">Edit it</a>
             <form method="POST" action="?_method=DELETE">
-            <button type="submit" class="todo-button">DELETE</button>
-        </form>
-
-        <a href='/todos/edit'>  <span class="todo-button">EDIT</span></a>
-    
-    
-    
-    
+              <button type="submit" class="todo-button">DELETE</button>
+            </form>
+            <a href='/todos/edit'>  <span class="todo-button">EDIT</span></a>
       </div>
     </div>
-   </body>
-</html>
+
+   <% include ../partials/end %>

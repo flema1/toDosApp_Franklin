@@ -1,9 +1,6 @@
 const Todo = require('../models/todo');
 
 const todoController = {};
-
-
-
 todoController.show = (req, res) => {
   Todo.findById(req.params.id)
     .then(todo => {
@@ -31,9 +28,6 @@ todoController.index = (req, res) => {
     })
 };
 
-
-
-
 todoController.create = (req, res) => {
   Todo.create(
     {title: req.body.title,
@@ -60,8 +54,6 @@ todoController.update = (req, res) => {
   });
 };
 
-
-
 todoController.edit = (req, res) => {
   Todo.findById(req.params.id)
     .then(todo => {
@@ -75,11 +67,7 @@ todoController.edit = (req, res) => {
     });
 }
 
-
-
-
 todoController.delete = (req, res) => {
-  console.log (req.params.id+ "nononon")
   Todo.delete(req.params.id)
     .then(() => {
        res.redirect('/todos/all');
@@ -91,7 +79,5 @@ todoController.delete = (req, res) => {
       });
     });
 };
-
-
 
 module.exports = todoController;

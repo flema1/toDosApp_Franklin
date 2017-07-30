@@ -1,6 +1,7 @@
 
 <% include ../partials/boilerplate %>
-<form method='POST' action='/todos/<%= data.id %>?_method=PUT'>
+
+    <form method='POST' action='/todos/<%= data.id %>?_method=PUT'>
         <input name='title' type='text' value='<%= data.title %>' />
         <input name='category' type='text' value='<%= data.category %>'/>
         <input name='status' type='text' value='<%= data.status %>' />

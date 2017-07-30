@@ -1,2 +1,2 @@
--- \c todos_dev
--- \i todo.sql
+  \c todos_dev
+  \i todo.sql

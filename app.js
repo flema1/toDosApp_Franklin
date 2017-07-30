@@ -1,17 +1,30 @@
+
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
-
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const app = express()
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
 
+const app = express(); 
+require('dotenv').config();
 app.use(logger('dev'));
 
 // middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+app.use(cookieParser());
+app.use(session({
+  secret: process.env.SECRET_KEY,
+  resave: false,
+  saveUninitialized: true,
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 // static files
 app.use(express.static('public'));
 
@@ -22,7 +35,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   res.render('index', {
-    message: 'Hello world we are aalive!',
+    message: "Welcome to the 'Todo-App'!",
   });
 });
 
@@ -41,6 +54,10 @@ app.get('/todos', (req, res) => {
  const todoRoutes = require('./routes/todo-routes');
  app.use('/todos', todoRoutes);
 
+const authRoutes = require('./routes/auth-routes');
+app.use('/auth', authRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
 
 
 app.get('*', (req, res) => {
