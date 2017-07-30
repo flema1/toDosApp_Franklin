@@ -17,11 +17,11 @@ app.get('/', (req, res) => {
     message: 'Hello world we are aalive!',
   });
 });
-
-app.listen(3003
-, function () {
-  console.log('app listening on port 3000!')
-})
+/* setting up port & listen */
+const PORT = process.env.PORT || 3010;
+app.listen(PORT, function() {
+  console.log(`listening on port ${PORT} 00`);
+});
 
 app.get('/toDos', (req, res) => {
   res.send('Info about toDos!');
