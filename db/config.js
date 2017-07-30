@@ -9,7 +9,8 @@ const pgp = require('pg-promise')(options);
 function setDatabase() {
   if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
     return pgp({
-      database: 'todos_dev',
+       database: 'adaquote_development',
+      //database: 'todos_dev',
       port: 5432,
       host: 'localhost',
     });
