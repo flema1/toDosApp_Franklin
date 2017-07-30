@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express()
 
-app.use(logger('dev'));
+//app.use(logger('dev'));
 // static files
 app.use(express.static('public'));
 
