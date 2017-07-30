@@ -1,4 +1,4 @@
-\c todos_dev
+-- \c todos_dev
 
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
