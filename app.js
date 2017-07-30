@@ -1,9 +1,9 @@
 const express = require('express');
-//const logger = require('morgan');
+const logger = require('morgan');
 const path = require('path');
 const app = express()
 
-//app.use(logger('dev'));
+app.use(logger('dev'));
 // static files
 app.use(express.static('public'));
 
