@@ -11,9 +11,12 @@
     justify-content: center;
     flex-direction: column;
 
+
 }
 .container img{
-    width="100px";
+
+
+    margin: auto;
 
 }
 .log {
@@ -50,6 +53,7 @@
     background: #F26D39;
      border:none;
 }
+
 .todo{
     padding-top: 10px;
     flex:1;
@@ -64,6 +68,7 @@
     /*background: red;*/
      text-align: center;
      color: white;
+       font-family: 'Indie Flower', cursive;
 
 }
 
@@ -131,6 +136,9 @@ nav ul li{
 nav ul li a{
   color:  white;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+
 }
 
 nav ul li :hover{

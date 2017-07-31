@@ -5,12 +5,12 @@
       <h1><span id="underline">Category: </span> <%= data.category %></h1>
       <h3><span id="underline">Status: </span> <%= data.status %></h3>
       <div class="button-container">
-            <a href='/todos/all'>See all todos<br></a>
-            <a href="/todos/<%= data.id %>/edit">Edit it</a>
+            <a href='/todos/all'>See all ToDos<br></a>
+            <a href="/todos/<%= data.id %>/edit">Edit Task</a>
             <form method="POST" action="?_method=DELETE">
-              <button type="submit" class="bu">DELETE</button>
+              <button type="submit" class="bu">Dlete Task</button>
             </form>
-            
+
                 </div>
     </div>
   </div>
