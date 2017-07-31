@@ -25,18 +25,18 @@ Todo.create = (todo) => {
 };
 
 Todo.update = (todo, id) => {
- /* console.log ("update             "+todo.title+"      update");
+/*  console.log ("update             "+todo.title+"      update");
     console.log ("update             "+todo.category+"      update");
     console.log ("update             "+todo.status+"      update");
     console.log ("update             "+id+"      update");*/
   return db.one(`
-     UPDATE todos SET 
+     UPDATE todos SET
         title = ($1),
         category = ($2),
          status = ($3)
         WHERE id = $4
         RETURNING *
-  `, [todo.title, todo.category, todo.status, 2]);
+  `, [todo.title, todo.category, todo.status, id]);
 }
 
 Todo.delete= (id) => {

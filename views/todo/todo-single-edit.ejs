@@ -1,13 +1,11 @@
 
 <% include ../partials/boilerplate %>
-
+<div class='login-container'>
     <form method='POST' action='/todos/<%= data.id %>?_method=PUT'>
         <input name='title' type='text' value='<%= data.title %>' />
         <input name='category' type='text' value='<%= data.category %>'/>
         <input name='status' type='text' value='<%= data.status %>' />
-        <input type="submit" value="Edit it!" />
+        <input type="submit" value="Edit it!" class="bu"/>
     </form>
-    
+  </div>
 <% include ../partials/end %>
-
-

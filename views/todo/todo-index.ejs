@@ -1,14 +1,14 @@
 <% include ../partials/boilerplate %>
-  <div class='todo-container'>
+  <div class='container'>
     <% for (let todo of data) { %>
       <div class='todo'>
-          <h1><%= todo.title %></h1>
-          <h1><%= todo.category %></h1>
-          <h1><%= todo.status %></h1>
+          <h1><span id="underline">Task: </span><%= todo.title %></h1>
+          <h1><span id="underline">category: </span><%= todo.category %></h1>
+          <h1><span id="underline">status: </span><%= todo.status %></h1>
           <div class='links'>
-            <a class='linkto' href='/todos/<%= todo.id%>'>Learn more</a>
+            <a class='linkto' href='/todos/<%= todo.id%>'>View Task</a>
             <form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
-            <input type="submit" value="Delete it!"/>
+            <input type="submit" value="Delete it!" class="bu"/>
           </form>
         </div>
       </div>

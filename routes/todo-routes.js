@@ -3,7 +3,7 @@ const todoRoutes = express.Router();
 const authHelpers = require('../services/auth/auth-helpers');
 const todosController = require('../controllers/todo-controller');
 
-todoRoutes.get('/all', todosController.index);
+todoRoutes.get('/all',authHelpers.loginRequired,  todosController.index);
 todoRoutes.post('/',authHelpers.loginRequired, todosController.create); 
 todoRoutes.get('/add',authHelpers.loginRequired, (req, res) => {
   // console.log ("  render                           render");

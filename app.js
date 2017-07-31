@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 
-const app = express(); 
+const app = express();
 require('dotenv').config();
 app.use(logger('dev'));
 
@@ -35,7 +35,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   res.render('index', {
-    message: "Welcome to the 'Todo-App'!",
+    message: "Welcome to the 'Todo-App'!"
   });
 });
 

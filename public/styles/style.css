@@ -1,0 +1,138 @@
+*{
+  /*font-family: 'Indie Flower', cursive;*/
+  font-family: 'Cabin', sans-serif;
+  background: #0F9982;
+}
+
+.container {
+    padding-top: 10px;
+    display: flex;
+    /*background: #F26D39;*/
+    justify-content: center;
+    flex-direction: column;
+
+}
+.container img{
+    width="100px";
+
+}
+.log {
+  text-align: center;
+  color: white;
+}
+
+.register-container form {
+  margin-top: 100px;
+  justify-content: center;
+  display: flex;
+}
+
+.login-container form {
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+}
+
+.login-container form input,
+.register-container form input{
+    background: white;
+    margin-left: 2px;
+}
+
+
+.login-container form  .bu ,
+.register-container form .bu{
+    margin-left: 5px;
+    background: #F26D39;
+     border:none;
+}
+.bu {
+    background: #F26D39;
+     border:none;
+}
+.todo{
+    padding-top: 10px;
+    flex:1;
+    flex-direction: column;
+     justify-content: center;
+     /*background: red;*/
+     display: flex;
+     border: 1px solid white;
+     margin: 5px;
+}
+.container h1, h2, h3{
+    /*background: red;*/
+     text-align: center;
+     color: white;
+
+}
+
+.todo .links{
+    /*display: flex;*/
+       /*justify-content: center;*/
+       /*flex-direction: column;*/
+      margin-left: 50px;
+      margin-bottom: 30px;
+
+}
+.links form{
+    margin-top:5px;
+    margin-bottom:5px;
+    display: flex;
+     /*justify-content: center;*/
+     /*margin-left: 50px; */
+}
+.links .linkto{
+    color:#F26D39;
+    list-style-type:none;
+    text-decoration: none;
+    text-align: center;
+
+}
+#underline{
+    /*display: block; */
+     text-decoration: underline;
+     color: black;
+}
+
+.button-container{
+    margin-left: 50px;
+    margin-bottom: 10px;
+
+}
+.button-container a{
+ color:#F26D39;
+  list-style-type:none;
+    text-decoration: none;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid white;
+}
+nav ul{
+  display: flex;
+  list-style-type:none;
+  /*justify-content: flex-end;*/
+  /*max-width: 80vw;*/
+  /*margin: auto;*/
+  /*align-items: center;*/
+}
+
+nav ul li{
+  flex: 1;
+  padding: 3px;
+  text-transform: uppercase;
+  /*background: green; */
+}
+
+nav ul li a{
+  color:  white;
+  text-decoration: none;
+}
+
+nav ul li :hover{
+  color:#FF5733;
+}

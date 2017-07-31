@@ -1,16 +1,18 @@
  <% include ../partials/boilerplate %>
-<div class='todo-info'>
-      <h1><%= data.title %></h1>
-      <h3><%= data.category %></h3>
-      <h3><%= data.status %></h3>
-      <a href='/todos/all'>See all todos</a>
+<div  class='container'>
+   <div class='todo'>
+      <h1><span id="underline">Task: </span> <%= data.title %></h1>
+      <h1><span id="underline">Category: </span> <%= data.category %></h1>
+      <h3><span id="underline">Status: </span> <%= data.status %></h3>
       <div class="button-container">
+            <a href='/todos/all'>See all todos<br></a>
             <a href="/todos/<%= data.id %>/edit">Edit it</a>
             <form method="POST" action="?_method=DELETE">
-              <button type="submit" class="todo-button">DELETE</button>
+              <button type="submit" class="bu">DELETE</button>
             </form>
-            <a href='/todos/edit'>  <span class="todo-button">EDIT</span></a>
-      </div>
+            
+                </div>
     </div>
+  </div>
 
    <% include ../partials/end %>

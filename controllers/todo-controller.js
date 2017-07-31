@@ -34,7 +34,7 @@ todoController.create = (req, res) => {
     category:req.body.category,
     status: req.body.status
   }).then( () => {
-    res.redirect('/todos');
+    res.redirect('todos/all');
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -42,12 +42,13 @@ todoController.create = (req, res) => {
 };
 
 todoController.update = (req, res) => {
+  // console.log ("          update")
   Todo.update({
    title: req.body.title,
     category:req.body.category,
     status: req.body.status
   }, req.params.id).then(todo => {
-    res.redirect(`/todos/${req.params.id}`); 
+    res.redirect(`/todos/${req.params.id}`);
     }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -73,7 +74,7 @@ todoController.delete = (req, res) => {
        res.redirect('/todos/all');
     }).catch(err => {
       console.log(err);
-      res.status(500).json({ 
+      res.status(500).json({
         message: 'Delete failed',
         error: err,
       });
